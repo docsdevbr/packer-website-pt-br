@@ -1,4 +1,11 @@
 ---
+# Copyright (c) 2024 HashiCorp, Inc.
+# Packer and the Packer logo are trademarks of HashiCorp.
+
+# Licensed under the Business Source License, Version 1.1.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/hashicorp/packer/blob/main/LICENSE
+
 description: |
   Packer needs plugins in order to build artifacts from a template.
   This page explains how plugins are discovered and loaded by Packer.
@@ -10,7 +17,7 @@ page_title: Plugin Loading - Specification
 This document aims to document how Packer discovers plugins on the local filesystem.
 This is not meant for beginners with Packer but instead serves as a technical reference for curiosity and troubleshooting purposes.
 
-If you are new to Packer,  you are advised to start with the [Installing Plugins](/packer/docs/plugins/install) page for details on plugin installation.  
+If you are new to Packer,  you are advised to start with the [Installing Plugins](/packer/docs/plugins/install) page for details on plugin installation.
 
 ## Plugin sources
 
@@ -61,7 +68,7 @@ If you want to change that behavior, there are two alternatives:
 
 **Note**: `PACKER_PLUGIN_PATH` has precedence over `PACKER_CONFIG_DIR`, if it is defined, `PACKER_CONFIG_DIR` will be ignored for plugin installation and loading.
 
-Refer to [Configuring Packer](/packer/docs/configure) for a full list of environment variables. 
+Refer to [Configuring Packer](/packer/docs/configure) for a full list of environment variables.
 
 ## Plugin installation directories
 

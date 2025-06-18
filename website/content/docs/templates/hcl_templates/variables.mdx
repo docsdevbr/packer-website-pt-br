@@ -1,4 +1,11 @@
 ---
+# Copyright (c) 2024 HashiCorp, Inc.
+# Packer and the Packer logo are trademarks of HashiCorp.
+
+# Licensed under the Business Source License, Version 1.1.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/hashicorp/packer/blob/main/LICENSE
+
 page_title: Input variables reference
 description: |-
   Input variables are parameters for Packer modules.
@@ -7,7 +14,7 @@ description: |-
 
 # Input Variables
 
-This topic provides reference information about input variables in Packer templates. Refer to [Local Variables](/packer/docs/templates/hcl_templates/locals) for information about using local variables in Packer. 
+This topic provides reference information about input variables in Packer templates. Refer to [Local Variables](/packer/docs/templates/hcl_templates/locals) for information about using local variables in Packer.
 
 ## Introduction
 
@@ -213,8 +220,8 @@ availability_zone_names = [
 ]
 ```
 
-~> **Important**: Unlike legacy JSON templates the input variables within a variable definitions file must be declared 
-via a variables block within a standard HCL2 template file `*.pkr.hcl` before it can be assigned a value. 
+~> **Important**: Unlike legacy JSON templates the input variables within a variable definitions file must be declared
+via a variables block within a standard HCL2 template file `*.pkr.hcl` before it can be assigned a value.
 Failure to do so will result in an unknown variable error during Packer's runtime.
 
 ### Auto-loaded Variable Definitions Files
@@ -234,8 +241,8 @@ with the root object properties corresponding to variable names:
 }
 ```
 
-~> **Important**: Unlike legacy JSON templates the input variables within a variable definitions file must be declared 
-via a variables block within a standard HCL2 template file `*.pkr.hcl` before it can be assigned a value. 
+~> **Important**: Unlike legacy JSON templates the input variables within a variable definitions file must be declared
+via a variables block within a standard HCL2 template file `*.pkr.hcl` before it can be assigned a value.
 Failure to do so will result in an unknown variable error during Packer's runtime.
 
 

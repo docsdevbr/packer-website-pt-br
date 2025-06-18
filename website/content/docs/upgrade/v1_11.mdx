@@ -1,4 +1,11 @@
 ---
+# Copyright (c) 2024 HashiCorp, Inc.
+# Packer and the Packer logo are trademarks of HashiCorp.
+
+# Licensed under the Business Source License, Version 1.1.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/hashicorp/packer/blob/main/LICENSE
+
 page_title: Upgrade to v1.11
 description: Learn how to upgrade your Packer installation to v1.11
 ---
@@ -11,13 +18,13 @@ This topic describes upgrade considerations for Packer v1.11. Refer to the [v1.1
 
 You can use the upgrade command for the package manager you installed Packer with or download and replace the existing binary to upgrade Packer. Refer to [Install Packer](/packer/install) for instructions
 
-## Upgrade from 1.10 
+## Upgrade from 1.10
 
 Take the following actions as a result of changes between v1.10 and v1.11.
 
 ### Review templates
 
-Packer v1.11 supports existing v1.10 templates. No action is required. 
+Packer v1.11 supports existing v1.10 templates. No action is required.
 
 ### Review plugin management processes
 
@@ -54,13 +61,13 @@ For any missing components, you may need to reinstall their respective plugins a
 Packer may print a message directing you to specify plugins in the `required_plugins` block in your template and install them using the `packer init` command.
 This is the preferred way to manage the plugins, but it is not required. You can still install plugins manually using the `packer plugins install` command. Refer to [Installing Plugins](/packer/docs/plugins/install)
 
-### Blocked remote access to plugin 
+### Blocked remote access to plugin
 
 If you cannot remotely install a plugin for any reason, such as a firewall configuration or GitHub is blocking access, you can use the local installation methods. Refer to [Installing Plugins](/packer/docs/plugins/install)
 
-### Install plugins from legacy JSON template 
+### Install plugins from legacy JSON template
 
-The `required_plugins` block is only available within HCL templates. Legacy JSON users must use `packer plugins install` 
+The `required_plugins` block is only available within HCL templates. Legacy JSON users must use `packer plugins install`
 
 ## Installing plugins outside of namespace directories
 
