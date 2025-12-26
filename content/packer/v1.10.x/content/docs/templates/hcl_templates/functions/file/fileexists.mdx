@@ -1,0 +1,42 @@
+---
+# Copyright (c) 2024 HashiCorp, Inc.
+# Packer and the Packer logo are trademarks of HashiCorp.
+#
+# Documentation licensed under the Business Source License, Version 1.1.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/hashicorp/packer/blob/-/LICENSE
+
+page_title: fileexists - Functions - Configuration Language
+description: The fileexists function determines whether a file exists at a given path.
+---
+
+# `fileexists` Function
+
+`fileexists` determines whether a file exists at a given path.
+
+```hcl
+fileexists(path)
+```
+
+Functions are evaluated during configuration parsing rather than at apply time,
+so this function can only be used with files that are already present on disk
+before Packer takes any actions.
+
+This function works only with regular files. If used with a directory, FIFO,
+or other special mode, it will return an error.
+
+## Examples
+
+```shell-session
+> fileexists("${path.folder}/hello.txt")
+true
+```
+
+```hcl
+fileexists("custom-section.sh") ? file("custom-section.sh") : local.default_content
+```
+
+## Related Functions
+
+- [`file`](/packer/docs/templates/hcl_templates/functions/file/file) reads the contents
+  of a file at a given path.

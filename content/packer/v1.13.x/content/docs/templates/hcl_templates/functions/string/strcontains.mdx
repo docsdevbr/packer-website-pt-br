@@ -1,0 +1,32 @@
+---
+# Copyright (c) 2024 HashiCorp, Inc.
+# Packer and the Packer logo are trademarks of HashiCorp.
+#
+# Documentation licensed under the Business Source License, Version 1.1.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/hashicorp/packer/blob/-/LICENSE
+
+page_title: strcontains function reference
+description: |-
+  The `strcontains` function searches for a substring within a string.
+---
+
+# `strcontains` Function
+
+The `strcontains` function searches for a substring within a string.
+
+```hcl
+strcontains(string, substr)
+```
+
+## Examples
+
+```
+> strcontains("hello world", "wor")
+true
+```
+
+```
+> strcontains("hello world", "wod")
+false
+```

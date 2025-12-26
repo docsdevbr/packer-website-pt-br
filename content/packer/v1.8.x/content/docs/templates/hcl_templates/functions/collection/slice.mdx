@@ -1,0 +1,38 @@
+---
+# Copyright (c) 2024 HashiCorp, Inc.
+# Packer and the Packer logo are trademarks of HashiCorp.
+#
+# Documentation licensed under the Business Source License, Version 1.1.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/hashicorp/packer/blob/-/LICENSE
+
+page_title: slice - Functions - Configuration Language
+description: The slice function extracts some consecutive elements from within a list.
+---
+
+# `slice` Function
+
+`slice` extracts some consecutive elements from within a list.
+
+```hcl
+slice(list, startindex, endindex)
+```
+
+`startindex` is inclusive, while `endindex` is exclusive. This function returns
+an error if either index is outside the bounds of valid indices for the given
+list.
+
+## Examples
+
+```shell-session
+> slice(["a", "b", "c", "d"], 1, 3)
+[
+  "b",
+  "c",
+]
+```
+
+## Related Functions
+
+- [`substr`](/docs/templates/hcl_templates/functions/string/substr) performs a similar function for characters in a
+  string, although it uses a length instead of an end index.
